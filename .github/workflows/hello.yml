@@ -8,7 +8,7 @@ on:
 
 jobs:
   hello_world:
-    runs-on: Ubuntu-18.04
+    runs-on: self-hosted
     steps:
       - name: Echo the messge
         run: |
