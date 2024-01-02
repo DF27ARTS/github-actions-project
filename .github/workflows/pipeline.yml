@@ -25,7 +25,20 @@ jobs:
           access_token: ${{ github.token }}
 
 
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 20 
+        
+
+
   lint: 
+    needs: [install]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -42,6 +55,7 @@ jobs:
 
 
   build: 
+    needs: [install]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
