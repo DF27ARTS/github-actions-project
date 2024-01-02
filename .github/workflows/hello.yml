@@ -1,0 +1,15 @@
+name: Say hello
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  hello_world:
+    runs-on: Ubuntu-18.04
+    steps:
+      - name: Echo the messge
+        run: |
+          echo "Hola Mundo!!!"
