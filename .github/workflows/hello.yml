@@ -14,5 +14,5 @@ jobs:
         run: |
           echo "Hola Mundo!!!"
       - name: Fecha actual
-        run: date"
+        run: date
       - run: ls -l
